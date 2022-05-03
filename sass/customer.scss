@@ -1,0 +1,111 @@
+.customer {
+    &-heading {
+        text-align: center;
+        padding: 0 250px;
+        margin-bottom: 60px;
+        &>h3 {
+            font-size: 35px;
+            color: $black_fill;
+            font-weight: 800;
+            margin: 23px 0 20px;
+        }
+    }
+    &-list {
+        justify-content: space-between;
+        display: flex;
+        &-item {
+            padding: 30px;
+            border: 1px solid #ccc;
+            width: calc(33.33% - 20px);
+            border-radius: 10px;
+            &-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &-user {
+                    display: flex;
+                    gap: 15px;
+                }
+                &-cart {
+                    display: flex;
+                    gap: 5px;
+                }
+            }
+            &-body {
+                margin-top: 20px;
+            }
+        }
+    }
+    &-next {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        &>ul {
+            display: flex;
+            gap: 10px;
+            &>li {
+                width: 15px;
+                height: 15px;
+                background-color: $red-fill;
+                border-radius: 50%;
+                list-style: none;
+            }
+        }
+        &-btn {
+            display: flex;
+            gap: 20px;
+            &-right {
+                padding: 20px;
+                border-radius: 50%;
+                color: #fff;
+                background-color: $red-fill;
+                display: flex;
+                align-items: center;
+            }
+            &-left {
+                padding: 20px;
+                border-radius: 50%;
+                color: #fff;
+                background-color: white;
+                border: 2px solid $red-fill;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    &-Subscribe {
+        transform: translateY(40%);
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 60px 70px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        &-content {
+            width: 500px;
+            &>h3 {
+                font-size: 35px;
+                color: $black_fill;
+            }
+            &>p {
+                margin-top: 25px;
+                font-size: 16px;
+                color: $black_fill2;
+            }
+        }
+        &-btn {
+            padding: 17px 77px;
+            background-color: $red-fill;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgb(245 56 56 / 35%);
+            &:hover {
+                background-color: $black_fill;
+                transition: all 0.25s linear;
+            }
+        }
+    }
+}

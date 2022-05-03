@@ -1,0 +1,39 @@
+.features {
+    padding-bottom: 130px;
+    &-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-banner {
+            width: 568.5px;
+            height: 463.1px;
+            display: block;
+            &>img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-content {
+            width: 369px;
+            &>h3 {
+                color: $black_fill;
+                font-size: 35px;
+                margin-bottom: 20px;
+            }
+            &>p {
+                color: $black_fill2;
+                margin-bottom: 23px;
+            }
+            &-list {
+                display: flex;
+                flex-direction: column;
+                &-item {
+                    margin-bottom: 21px;
+                    display: flex;
+                    gap: 0 10px;
+                }
+            }
+        }
+    }
+}

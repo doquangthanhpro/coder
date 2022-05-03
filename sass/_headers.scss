@@ -1,0 +1,91 @@
+.header {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: fixed;
+    background-color: #ffff;
+    z-index: 5;
+    &_list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &>ul {
+            display: flex;
+            list-style: none;
+            gap: 45px;
+            font-size: 16px;
+            &>li>a {
+                color: #4f5665;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 500;
+                position: relative;
+                display: block;
+                &:hover {
+                    color: red;
+                    transition: all 0.2s linear;
+                }
+                &:hover::after {
+                    visibility: inherit;
+                    opacity: 1;
+                }
+                &::after {
+                    visibility: hidden;
+                    opacity: 0;
+                    content: "";
+                    position: absolute;
+                    bottom: -10px;
+                    left: 10;
+                    right: 0;
+                    width: 0px;
+                    height: 3px;
+                    background-color: #f53838;
+                    animation: animation 1s linear infinite;
+                }
+                @keyframes animation {
+                    0%,
+                    20% {
+                        left: 10px;
+                        width: 0px;
+                    }
+                    100% {
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &-logo {
+        width: 149px;
+        height: 36.5px;
+        &>img {
+            width: 100%;
+        }
+    }
+    &-cart {
+        display: flex;
+        gap: 20px;
+        font-weight: 600;
+        align-items: center;
+        text-transform: capitalize;
+        &-signin {
+            &>a {
+                color: #0b132a;
+            }
+        }
+        &-signup {
+            &>a {
+                display: block;
+                padding: 13px 45px 13px;
+                border-radius: 30px;
+                border: 1px solid red;
+                color: red !important;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.align {
+    display: none;
+}
